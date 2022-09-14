@@ -1,0 +1,55 @@
+.side-menu {
+    background: #EDA64C;
+    padding-top: 56px;
+    height: calc(100% - 56px);
+    width: 100%;
+    overflow: hidden;
+    top: 0;
+    position: absolute;
+    &.opened {
+        animation: slideIn .3s ease-in-out;
+        opacity: 1;
+        z-index: 2;
+    }
+    &.closed {
+        animation: slideOut .3s ease-in-out;
+        opacity: 0;
+        z-index: -2;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transition: transform 500ms, border-radius 1.5s;
+        border-radius: 0% 0% 0% 100%;
+        transform: translateX(100%) translateY(-100%);
+        transform-origin: top right;
+        z-index: -2;
+    }
+    100% {
+        opacity: 1;
+        transition: transform 500ms, border-radius 2s;
+        border-radius: 0%;
+        transform: translateX(0) translateY(0);
+        z-index: 2;
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        opacity: 1;
+        transition: transform 500ms, border-radius 2s;
+        border-radius: 0%;
+        transform: translateX(0) translateY(0);
+        z-index: 2;
+    }
+    100% {
+        opacity: 0;
+        transition: transform 500ms, border-radius 1.5s;
+        border-radius: 0% 0% 0% 100%;
+        transform: translateX(100%) translateY(-100%);
+        transform-origin: top right;
+        z-index: -2;
+    }
+}

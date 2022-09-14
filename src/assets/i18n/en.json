@@ -1,0 +1,45 @@
+{
+	"experience": {
+		"harmonic": {
+			"title": ""
+		},
+		"id3i": {
+			"title": ""
+		},
+		"title": "Work Experience"
+	},
+	"hello-world": "Hello world",
+	"menu": {
+		"about": "About me",
+		"contact": "Contact",
+		"cv": "Download resume"
+	},
+	"presentation": {
+		"about": "Hey! I'm Jordan. Freshly graduated, I'm now making invoicing great again at Intia as a WEB DEVELOPER 🤓\nLet's be honest, developers mastering every language are unicorns ... We all have",
+		"introduction": "Hello, I am"
+	},
+	"projects": {
+		"title": "Projects"
+	},
+	"studies": {
+		"enib": {
+			"date": "2022",
+			"details": "Currently studying in the fifth year of a five-year course in General Engineering with Computer science Diploma expected in 2023.",
+			"location": "ENIB - Brest, France",
+			"title": "Brest National School of Engineering"
+		},
+		"fontys": {
+			"date": "September - January 2022",
+			"details": "AI for society program",
+			"location": "Fontys- Eindhoven, Netherlands",
+			"title": "Fontys University of Applied Sciences"
+		},
+		"lycee": {
+			"date": "2018",
+			"details": "Gained the Baccalauréat, French secondary education diploma",
+			"location": "Bain de Bretagne, France",
+			"title": "Scientific Baccalauréat"
+		},
+		"title": "Studies"
+	}
+}

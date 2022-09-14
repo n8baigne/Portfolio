@@ -1,0 +1,31 @@
+.section-container {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    min-height: calc(100vh - 56px);
+    scroll-snap-align: end;
+    background-color: #F3F3F8;
+    scroll-snap-align: start;
+    .parallax {
+        background-size: cover;
+        background-attachment: fixed;
+        display: flex;
+        justify-content: flex-start;
+        height: 170px;
+        padding-left: 10%;
+        margin-top: 56px;
+        h1 {
+            font-size: 7vmin;
+            color: #eee;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+    }
+    .no-parallax {
+        display: flex;
+        flex: 1;
+        min-height: calc(100vh - 226px);
+        background-color: #F3F3F8;
+    }
+}

@@ -1,0 +1,45 @@
+{
+	"experience": {
+		"harmonic": {
+			"title": ""
+		},
+		"id3i": {
+			"title": ""
+		},
+		"title": "Expérience professionnelle"
+	},
+	"hello-world": "Bonjour monde",
+	"menu": {
+		"about": "A propos de moi",
+		"contact": "Contact",
+		"cv": "Télécharger mon CV"
+	},
+	"presentation": {
+		"about": "Hey ! I'm Jordhan. Freshly graduated, I'm now making invoicing great again at Intia as a WEB DEVELOPER 🤓\nLet's be honest, developers mastering every language are unicorns ... We all have",
+		"introduction": "Hello, je suis"
+	},
+	"projects": {
+		"title": "Projets"
+	},
+	"studies": {
+		"enib": {
+			"date": "2022",
+			"details": "Actuellement en cinquième année d'école d'ingénieur. Diplôme attendu en 2023.",
+			"location": "ENIB - Brest, France",
+			"title": "École Nationale d'Ingénieur de Brest"
+		},
+		"fontys": {
+			"date": "sept - janv 2022",
+			"details": "AI for society programme",
+			"location": "Fontys - Eindhoven, Pays-Bas",
+			"title": "Fontys Université de sciences appliquées"
+		},
+		"lycee": {
+			"date": "2018",
+			"details": "Lycée Jean Brito, mention Bien et section Européenne Espagnol",
+			"location": "Bain de Bretagne, France",
+			"title": "Baccalauréat Scientifique"
+		},
+		"title": "Études"
+	}
+}
