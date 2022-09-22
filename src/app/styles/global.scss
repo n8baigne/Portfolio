@@ -1,0 +1,25 @@
+$primary: #EDA64C;
+$secondary: #0C131F;
+$white: #fff;
+.primary {
+    background-color: $primary;
+    color: $white;
+}
+
+.text-primary {
+    color: $primary;
+}
+
+.secondary {
+    background-color: $secondary;
+    color: $white;
+}
+
+.text-secondary {
+    color: $secondary;
+}
+
+h1 {
+    font-family: "Open sans", sans-serif;
+    font-size: 40px;
+}

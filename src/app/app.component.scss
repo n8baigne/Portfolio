@@ -1,11 +1,12 @@
 @import "./styles/button.scss";
+@import "./styles/global.scss";
 .portfolio-container {
     display: flex;
     flex-direction: column;
     height: 100vh;
     justify-content: flex-start;
     flex: 1;
-    background-color: #fff;
+    background-color: $white;
     overflow-y: auto;
     overflow-x: hidden;
     scroll-behavior: smooth;
@@ -19,7 +20,6 @@
         box-sizing: border-box;
         mix-blend-mode: difference;
         -webkit-backdrop-filter: blur(8px);
-        color: #f3ece0;
         backdrop-filter: blur(8px);
         padding: 0 20px;
         left: 0;
@@ -37,6 +37,7 @@
             }
             .language-link-divider {
                 margin: 0 8px;
+                color: #f3ece0;
             }
         }
         .burger-menu-icon-container {
@@ -174,6 +175,9 @@
         flex: 1;
         flex-direction: column;
         padding-top: 56px;
+        section {
+            width: 100%;
+        }
         .profile-container {
             scroll-snap-align: end;
             scroll-snap-stop: always;
@@ -190,7 +194,7 @@
                 justify-content: center;
                 padding: 0 30px;
                 @media only screen and (max-width: 992px) {
-                    flex-direction: column;
+                    flex-direction: column-reverse;
                     align-items: center;
                 }
                 .about {
@@ -199,9 +203,9 @@
                     flex: 5;
                     font-weight: bold;
                     max-width: 50%;
-                    padding: 20px;
+                    padding: 25px 15px 0 15px;
                     @media only screen and (max-width: 992px) {
-                        max-width: 80%;
+                        max-width: 90%;
                     }
                     .introduction {
                         display: flex;
@@ -233,17 +237,19 @@
                         flex: 1;
                         font-family: 'Open Sans', sans-serif;
                         font-weight: 300;
-                        font-size: 20px;
+                        font-size: 15px;
+                        .details-item {
+                            margin-top: 15px;
+                        }
                     }
                 }
                 .profile-picture {
                     display: flex;
                     flex: 8;
-                    padding: 20px;
+                    padding: 10px;
                     border-radius: 50%;
-                    max-width: 350px;
-                    width: 30%;
-                    min-width: 240px;
+                    max-width: 45vmin;
+                    min-width: 20vmax;
                 }
             }
         }

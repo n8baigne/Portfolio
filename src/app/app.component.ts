@@ -21,6 +21,8 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('about') aboutElem!: ElementRef;
   @ViewChild('container') container!: ElementRef;
   @ViewChild('profilePicture') profilePictureElem!: ElementRef;
+  @ViewChild('contactSection') contactElem!: ElementRef;
+  @ViewChild('experienceSection') experienceElem!: ElementRef;
 
   constructor(private translate: TranslateService, private renderer: Renderer2, private route: ActivatedRoute, private router: Router) {
     this.sections = [];
@@ -33,10 +35,10 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
   ngOnInit() {
     this.routingParametersSubscription = this.route.queryParams.subscribe(params => {
       let lang = params['lang'];
-      if (!lang) {
+      if (!lang || lang === undefined) {
         this.router.navigate(['/home'], { queryParams: { lang: 'fr' } });
       }
-      this.language = lang;
+      this.language = lang ?? 'fr';
       this.translate.use(this.language);
     });
   }
@@ -45,8 +47,24 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
     this.renderer.listen(this.container.nativeElement, 'scroll', (event) => {
       this.aboutElem.nativeElement.style.transform = `translateX(-${event.target.scrollTop}px)`;
       this.profilePictureElem.nativeElement.style.transform = `translateX(${event.target.scrollTop}px)`;
-    }
-    )
+    });
+    this.route.fragment.subscribe(fragment => { 
+      this.isSideMenuOpen = false;
+      switch (fragment) {
+        case 'contact' : {
+          this.contactElem.nativeElement.scrollIntoView();
+          break;
+        }
+        case 'experience' : {
+          this.experienceElem.nativeElement.scrollIntoView();
+          break;
+        }
+        case 'profile' : {
+          this.profilePictureElem.nativeElement.scrollIntoView();
+          break;
+        }
+      };
+     });
   }
 
   ngOnDestroy() {

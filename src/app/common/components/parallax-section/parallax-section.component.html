@@ -1,9 +1,9 @@
 <div class="section-container">
-    <section class="parallax" [ngStyle]="{'background-image': 'url(' + section.backgroundImage + ')'}">
+    <div class="parallax" [ngStyle]="{'background-image': 'url(' + section.backgroundImage + ')'}">
         <h1>{{section.title}}</h1>
-    </section>
+    </div>
 
-    <section class="no-parallax">
+    <div class="no-parallax">
         <ng-content></ng-content>
-    </section>
+    </div>
 </div>

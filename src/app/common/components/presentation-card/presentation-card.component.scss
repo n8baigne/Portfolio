@@ -1,8 +1,58 @@
 @import "../../../styles/chips.scss";
 .presentation-card-container {
     display: flex;
-    .header {
-        .title {}
-        .technologies {}
+    flex: 1;
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        align-items: center;
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 40px;
+            box-sizing: border-box;
+            width: 100%;
+            @media only screen and (max-width: 768px) {
+                flex-direction: column;
+            }
+            .date {
+                color: #0C131F;
+                font-size: 17px;
+                text-transform: uppercase;
+            }
+            .description {
+                display: flex;
+                flex: 1;
+                flex-direction: column;
+                .title {
+                    display: flex;
+                    justify-content: space-around;
+                    font-size: 24px;
+                }
+                .subtitle {
+                    display: flex;
+                    justify-content: space-around;
+                    font-size: 18px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                .technologies {
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+            .logo {
+                max-height: 56px;
+            }
+        }
+        .content {
+            display: flex;
+            flex: 1;
+            max-width: 70%;
+            .details {
+                text-align: justify;
+            }
+        }
     }
 }

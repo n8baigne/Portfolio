@@ -1,5 +1,5 @@
 <div class="portfolio-container" #container>
-    <div class="header" [class.menu-opened]="isSideMenuOpen">
+    <header class="header" [class.menu-opened]="isSideMenuOpen">
         <div class="language-link-container">
             <a class="language-link language-link-fr" [class.active]="language === 'fr'" (click)="useLanguage('fr')">FR</a>
             <div class="language-link-divider">/</div>
@@ -15,7 +15,7 @@
             </svg>
           </button>
         </div>
-    </div>
+    </header>
 
     <div class="main-content-container">
         <section class="profile-container no-parallax">
@@ -29,14 +29,22 @@
                             <div class="first-name">
                                 Nathan
                             </div>
-                            <div class="last-name">
+                            <div class="last-name text-primary">
                                 Baigne
                             </div>
                         </div>
                     </div>
 
                     <div class="details">
-                        {{ 'presentation.about' | translate }}
+                        <div class="details-item">
+                            {{ 'presentation.my-goal' | translate }}
+                        </div>
+                        <div class="details-item">
+                            {{ 'presentation.my-life' | translate }}
+                        </div>
+                        <div class="details-item">
+                            {{ 'presentation.conclusion' | translate }}
+                        </div>
                     </div>
 
                 </div>
@@ -47,10 +55,10 @@
 
         </section>
 
-        <div class="sections" *ngFor="let section of sections">
+        <div *ngFor="let section of sections">
             <app-parallax-section [section]="section">
-                <ng-container [ngTemplateOutlet]="studies" *ngIf="section.name === 'studies'"></ng-container>
-                <ng-container [ngTemplateOutlet]="experiences" *ngIf="section.name === 'experiences'"></ng-container>
+                <ng-container [ngTemplateOutlet]="studies" *ngIf="section.name === 'studies'" id="studies"></ng-container>
+                <ng-container [ngTemplateOutlet]="experiences" *ngIf="section.name === 'experiences'" id="experience"></ng-container>
                 <ng-container [ngTemplateOutlet]="projects" *ngIf="section.name === 'projects'"></ng-container>
             </app-parallax-section>
         </div>
@@ -66,8 +74,12 @@
             <div class="nav">
                 <div class="nav__content">
                     <ul class="nav__list">
-                        <li class="nav__list-item">{{ 'menu.about' | translate }}</li>
-                        <li class="nav__list-item">{{ 'menu.contact' | translate }}</li>
+                        <a class="nav__list-item" routerLink="home" fragment="profile">
+                            {{ 'menu.about' | translate }}
+                        </a>
+                        <a class="nav__list-item" routerLink="home" fragment="contact">
+                            {{ 'menu.contact' | translate }}
+                        </a>
                     </ul>
                 </div>
                 <a [href]="cvLink" target="_blank" class="btn-outline">{{ 'menu.cv' | translate }}</a>
@@ -78,28 +90,30 @@
 </div>
 
 <ng-template #experiences>
-    <app-carousel>
-        <app-carousel-item>
-            <app-presentation-card></app-presentation-card>
-        </app-carousel-item>
-        <app-carousel-item>
-            <div class="degree fontys">
-                fTONYS
-            </div>
-        </app-carousel-item>
-        <app-carousel-item>
-            <div class="degree highschool">
-                Jean Brito
-            </div>
-        </app-carousel-item>
+    <section #experienceSection>
+        <app-carousel>
+            <app-carousel-item>
+                <app-presentation-card></app-presentation-card>
+            </app-carousel-item>
+            <app-carousel-item>
+                <div class="degree fontys">
+                    fTONYS
+                </div>
+            </app-carousel-item>
+            <app-carousel-item>
+                <div class="degree highschool">
+                    Jean Brito
+                </div>
+            </app-carousel-item>
 
-    </app-carousel>
+        </app-carousel>
+    </section>
 </ng-template>
 
 <ng-template #projects>
-    <app-carousel>
+    <app-carousel #contact>
         <app-carousel-item>
-            <div class="degree enib">
+            <div class="degree enib" #contactSection>
                 eNIB
             </div>
         </app-carousel-item>

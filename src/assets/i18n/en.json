@@ -15,8 +15,10 @@
 		"cv": "Download resume"
 	},
 	"presentation": {
-		"about": "Hey! I'm Jordan. Freshly graduated, I'm now making invoicing great again at Intia as a WEB DEVELOPER 🤓\nLet's be honest, developers mastering every language are unicorns ... We all have",
-		"introduction": "Hello, I am"
+		"conclusion": "This site will allow you to learn more about my studies, my professional experiences and my projects! Enjoy 👋!",
+		"introduction": "Hello, I am",
+		"my-goal": "Soon to graduate 📚, I am looking for an engineer internship for a period of 6 months. I take real pleasure in developing web applications, which is why I would like to make it my job 🚀.",
+		"my-life": "Besides that, I spend my time climbing 🧗 running 🏃‍ and doing tinkering 🔨."
 	},
 	"projects": {
 		"title": "Projects"

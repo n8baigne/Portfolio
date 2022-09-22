@@ -13,6 +13,7 @@ import { CarouselComponent } from './common/components/carousel/carousel.compone
 import { CarouselItemComponent } from './common/components/carousel/components/carousel-item/carousel-item.component';
 import { ParallaxSectionComponent } from './common/components/parallax-section/parallax-section.component';
 import { PresentationCardComponent } from './common/components/presentation-card/presentation-card.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [

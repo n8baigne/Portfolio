@@ -15,8 +15,10 @@
 		"cv": "Télécharger mon CV"
 	},
 	"presentation": {
-		"about": "Hey ! I'm Jordhan. Freshly graduated, I'm now making invoicing great again at Intia as a WEB DEVELOPER 🤓\nLet's be honest, developers mastering every language are unicorns ... We all have",
-		"introduction": "Hello, je suis"
+		"conclusion": "Ce site vous permettra d'en apprendre plus sur mes études, mes expériences professionnelles et mes projets ! Enjoy 👋!",
+		"introduction": "Hello, je suis",
+		"my-goal": "Bientôt diplômé 📚, je suis à la recherche d'un stage ingénieur pour une durée de 6 mois. Je prends un réel plaisir à développer des applications web, c'est pourquoi j'aimerais en faire mon métier 🚀.",
+		"my-life": "A côté de ça, j'occupe mon temps à faire de l'escalade 🧗 à courir 🏃‍ et à bricoler 🔨."
 	},
 	"projects": {
 		"title": "Projets"
